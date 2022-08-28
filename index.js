@@ -1,5 +1,9 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  var regex = /[\W_]/g;
+  var lowRegStr = word.toLowerCase().replace(regex, '');
+  var reverseStr = lowRegStr.split('').reverse().join('');
+  return reverseStr === lowRegStr;
 }
 
 /* 
